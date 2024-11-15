@@ -1,1 +1,1 @@
-game.splash("Welcome to the Game!")
+game.splash("Welcome to the Stock Game")
