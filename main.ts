@@ -23,6 +23,7 @@ if ("NASDAQ") {
 game.splash("you've chosen NASDAQ")
 pause(500)
 game.splash("This is its current Value: " + "$" + ("" + ("" + NASDAQ)))
+//  setting images 
 if (SnP) {
     SnP < 10000
     scene.setBackgroundImage(img`
