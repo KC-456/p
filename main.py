@@ -1,6 +1,5 @@
 def investment():
-    # setting images
-    if Choice > 5:
+    while Choice_1 == 1:
         scene.set_background_image(img("""
             3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
                         3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
@@ -123,7 +122,7 @@ def investment():
                         3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
                         3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
         """))
-    else:
+    while Choice_2 == 2:
         scene.set_background_image(img("""
             3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
                         3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
@@ -248,25 +247,23 @@ def investment():
         """))
 def SnPstock():
     global SnP, NASDAQ
-    game.ask_for_string("Here are your options! NASDAQ and SnP", 6)
+  
     # if S&P true then splash their choice then ask how much they want to invest and their current wallet amount
-    if Choice > 5:
-        True
-        SnP = randint(1, 2000)
+    if Choice_1 == 1:
+        SnP = Choice_1
         game.splash("you've chosen the S&P!")
         game.splash("This is its current Value: " + "$" + ("" + str(SnP)))
-    else:
-        True
-        NASDAQ = randint(2000, 4000)
+    elif Choice_2 == 2:
+        NASDAQ = Choice_2
         game.splash("you've chosen NASDAQ")
         game.splash("This is its current Value: " + "$" + ("" + str(NASDAQ)))
 NASDAQ = 0
 SnP = 0
-Choice = 0
+Choice_2 = 0
+Choice_1 = 0
 game.splash("Welcome to the Stock Game Investor! ")
 pause(500)
 game.splash("What would you like to invest in?")
-Choice = randint(0, 10)
 pause(500)
 SnPstock()
 pause(500)

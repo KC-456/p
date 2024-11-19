@@ -1,6 +1,5 @@
 function investment () {
-    // setting images
-    if (Choice > 5) {
+    while (true) {
         scene.setBackgroundImage(img`
             3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
             3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
@@ -123,7 +122,8 @@ function investment () {
             3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
             3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
             `)
-    } else {
+    }
+    while (true) {
         scene.setBackgroundImage(img`
             3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
             3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
@@ -249,25 +249,22 @@ function investment () {
     }
 }
 function SnPstock () {
-    game.askForString("Here are your options! NASDAQ and SnP", 6)
-// if S&P true then splash their choice then ask how much they want to invest and their current wallet amount
-    if (Choice > 9) {
-        SnP = randint(1, 2000)
+    // if S&P true then splash their choice then ask how much they want to invest and their current wallet amount
+    if (Choice_1 == 1) {
+        let SnP = 0
         game.splash("you've chosen the S&P!")
         game.splash("This is its current Value: " + "$" + ("" + SnP))
     } else {
-        NASDAQ = randint(2000, 4000)
+        let NASDAQ = 0
         game.splash("you've chosen NASDAQ")
         game.splash("This is its current Value: " + "$" + ("" + NASDAQ))
     }
 }
-let NASDAQ = 0
-let SnP = 0
-let Choice = 0
+let Choice_1 = 0
 game.splash("Welcome to the Stock Game Investor! ")
 pause(500)
 game.splash("What would you like to invest in?")
-Choice = randint(0, 10)
+Choice_1 = game.askForNumber("Snp=1 Nas=2", 1)
 pause(500)
 SnPstock()
 pause(500)
