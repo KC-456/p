@@ -1,5 +1,7 @@
 # PLEASE LET ME KNOW IF NONE OF THIS MAKES SENSE
 # I WILL BE MORE THAN HAPPY TO EXPLAIN ! ! ! ! !
+# PLEASE ADD THE IMAGES FOR POSITIVE GAIN AND LOSS 
+# EVERYTHING SHOOULD BE CLEARLY DEFINED 
 def choose_investment():
     global choice_1
     choice_1 = game.ask_for_string("what would you like to invest in?  NASDAQ or SnP", 6)
