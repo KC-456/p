@@ -1,270 +1,57 @@
-def investment():
-    while Choice_1 == 1:
-        scene.set_background_image(img("""
-            3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
-                        3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
-                        3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333337333333
-                        333fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7ffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7fffff333
-                        333fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7ffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7fffffff333
-                        333fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7ffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7fffffffff333
-                        333fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7ffffffffff333
-                        333fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff77fffffffffffffffffff7fffffffffffffffffffff7fffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7f77fffffffffffffffff777fffffffffffffffffff7ffffffffffff333
-                        333fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7fff7fffffffffffffffff7f7ffffffffffffffffff7fffffffffffff333
-                        333fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff77fffff7ffffffffffffff77fff7ffffffffffffffff7ffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff77fffffff7fffffffffffff7ffff7ffffffffffffff77fffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7fffffffff7fffffffffff7fffff7ffffffffffff77fffffffffffffffff333
-                        333fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7ffffffffffffffffffff77fffffffffff7fffffffff7fffffff7ffffffffff7fffffffffffffffffff333
-                        333fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff77fffffffffffffffff77fffffffffffff77fffffff7ffffffff77ffffffff7ffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7f7ffffffffffffffff77fffffffffffffff7fffff77ffffffffff7fffffff7fffffffffffffffffffff333
-                        333fffffffffffffffffffffffffffffffffffffffffffffffffffffff77ffffffffffff7fff7fffffffffffff77ffffffffffffffffff77ff7ffffffffffff77fffff7ffffffffffffffffffffff333
-                        333fffffffffffffffffffffffffffffffffffffffffffffffffffffff77ffffffffffff7fff77fffffffffff77ffffffffffffffffffff777ffffffffffffff77fff7fffffffffffffffffffffff333
-                        333fffffffffffffffffffffffffffffffffffffffffffffffffffff77f7fffffffffff7fffff7ffffffffff77fffffffffffffffffffffffffffffffffffffff7777ffffffffffffffffffffffff333
-                        333fffffffffffffffffffffffffffffffffffffffffffffffffff777ff7fffffffffff7fffff77ffffffff7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffff77ffff77fffffffff7fffffff7ffffff77ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffff77fffffff77ffffffff7fffffff77ffff77fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffffffffffffffffffffffffffffffffffffff7ffffffffff77ffffff7fffffffff77ff7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffff77fffffffffff7ffffff7ffffffffff777ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffff7fffffffffffff7ffff7fffffffffff7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffff7fffffffffffff77fff7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffffffffffffffffffffffffffffffffffff7fffffffffffffff7ff7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffff7ffffffffffffffff7ff7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffffffffffffffffffffffffffffffffff77fffffffffffffffff77ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffff77ffffffffffffffffff7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffff7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffff77ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffff7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffffffffffffffffffffffffffffff77fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffff77ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffffffffffffffffffffffffffff77fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffff77ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffff7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffff77ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffff7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffffffffffffffffffffffff7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffff7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffff77ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffffffffffffffffffff77fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffff77ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffffffffffffffffff77fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffff77ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffffffffffffffff77fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffff77ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffff7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffffffffffffff77fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffff77ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffff7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffffffffffff77fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffffffffffff7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffff77ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffff7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffffffffff77fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffff77ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffffffff77fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffffffff7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffff77ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffff7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffffff77fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffff777ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffff7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffff7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffff7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffff77fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffff77ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffff7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffff7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffff7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffff7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffff7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffff77ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffff7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffff7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffff7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffff7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffff7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fff7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fff7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ff7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333f7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333f7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        3337fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        3337fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111f333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333f2ffffffffffffffffffffffffffffffffffffffffffffffffffffff7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333f2fffffffffffff2ffffffffffffffffffffffff2fffffffffffffff7fffffffff2ffffffffffffffffffffffffffffffffffffff2ffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333f2fff2fffffffff2ffffffffffffffffffffffff2fffffffffffffff7fffffffff2ffffffffffffffffffffffffffffffffffffff2fffffffff2ffffffffffffffffffffffffffffffffffffff333
-                        333f2fff2fffff2fff2fffffffffffffff2ffffffff2ffffffff2ffffff7f7fffffff2ffffffffffffffffffffffffffffffffffffff2fffffffff2fffffffffff2ffffffff2fffffffffffffffff333
-                        333f2fff2fffff2fff2fff7fffffffffff2ffff7fff2ffffffff2ffffff7f7ff2ffff2ff7fffffffffffffffffffffffffffffffffff2fffffffff2fffffffffff2ffffffff2fffffffffffff7fff333
-                        333f2fff2f72ff2fff2fff7fff2fffffff2ffff7fff2ffffffff2ffffff7f7ff2ffff2ff7ffffffffff2ffffffffffffffffffffffff2ffff7ffff2fffffffffff2ffffffff2ffffffff7ffff7fff333
-                        333f2f7f2f72ff2fff2fff7fff2ff7ffff2ffff7fff2fffff7ff2ff7fff7f7ff2ffff2ff7ffffffffff2ffffffffffffffffffffffff2ffff7ffff2fffffffffff2ffffffff2ffffffff7ffff7fff333
-                        333f2f7f2f72ff2fff2fff7fff2ff7ffff2ffff7fff2fffff7ff2ff7fff7f111111111ff7ffffffffff2fffffffffffff2ffffffffff2ffff7fffff2ffff7ff11111111ff7f2ffffffff7ffff7fff333
-                        333f2f7f2f72ff2fff2fff7fff2ff7ffff2ffff7fff2fffff7ff2ff7fff111ff2ffff1117ffffffffff2ffff7ffffffff2fff7ffffff2ffff7fffff2fff1111fff2fff11f7f2ffff7fff7ffff7fff333
-                        333f2f7f2f72ff1111111111ff2ff7ffff2ffff7fff2fffff7ff2ff7f117f7ff2ffff2ff11fffffffff2ffff7ffffffff111111111112ffff7fffff211117fffff2fffff11f2fff1111111fff7fff333
-                        333f2f7f2f72112fff2fff7f111ff7ffff2ffff7fff2fffff7ff2f111ff7f7ff2ffff2ff7f1111fffff2ffff7fffffff11fff7fffff111ffff7fff111fff7fffff2ffffff11111117fff711ff7fff333
-                        333f2f7f2f111f2fff2fff7fff211111ff2ffff7fff2fffff7f11117fff7f7ff2fffff2f7ffff111fff2ffff7fffff11f2fff7fffffff11fff7f1112ffff7fffff2ffffff7f2ffff7fff7f11f7fff333
-                        333f2f7f2f12ff2fff2fff7fff2ff7f1111ffff7ff2ffffff11f2ff7fff7f7ff2fffff2f7fffffff1111ffff7ff111fff2fff7fffffff2111111ffff2fff7ffffff2fffff7ff2fff7fff7ffff7fff333
-                        333f2f7f2172ff2fff2fff7fff2fff7ff2f111111111111117ff2ff7fff7f7ff2fffff2f7ffffffffff211111111fffff2fff7fffffff2ffff7fffff2ffff7fffff2fffff7ff2fff7fff7ffff7fff333
-                        333f2f7f1172ff2fff2fff7fff2fff7ff2fffff7ff2ffffff7ff2ff7fff7f7ff2fffff2f7ffffffffff2ffff7ffffffff2fff7fffffff2fffff7ffff2ffff7fffff2fffff7ff2fff7ffff7fff7fff333
-                        333f2f7f1f72ff2fff2fff7fff2fff7ff2fffff7ff2ffffff7ff2ff7fff7f7ff2fffff2f7ffffffffff2ffff7ffffffff2fff7fffffff2fffff7ffff2ffff7fffff2fffff7ff2fff7ffff7fff7fff333
-                        333f2f711f72ff2fff2fff7fff2fff7ff2fffff7ff2ffffff7ff2ff7fff7f7ff2fffff2f7ffffffffff2ffff7ffffffff2fff7fffffff2fffff7fffff2fff7fffff2fffff7ff2fff7ffff7fff7fff333
-                        333f2f1127f2ff2fff2fff7fff2fff7ff2fffff7ff2ffffff7ff2ff7fff7f7ff2fffff2f7ffffffffff2ffff7ffffffff2fff7fffffff2fffff7fffff2fff7fffff2fffff7ff2fff7ffff7fff7fff333
-                        333f2f1f2ff2ff2fff2fff7fff2fff7ff2fffff7ff2ffffff7ff2ff7fff7f7ff2fffff2f7ffffffffff2ffff7ffffffff2fff7fffffff2fffff7fffff2fff7fffff2fffff7ff2fff7ffff7fff7fff333
-                        333f2f7f2ff2ff2fff2fff7fff2fff7ff2fffff7ff2ffffff7ff2ff7fff7ff7f2fffff2f7ffffffffff2ffff7ffffffff2fff7fffffff2ffffff7ffff2ffff7ffff2fffff7ff2fff7ffff7fff7fff333
-                        333f2ff72ff2ff2fff2fff7fff2ffff7f2fffff7ff2ffffff7ff2ff7fff7ffff2fffff2f7ffffffffff2ffff7ffffffff2fff7fffffff2fffffffffff2ffffffffff2ffff7ff2fff7ffff7fff7fff333
-                        333f2fff2ff2ff2fff2fff7ffffffffff2ffffffff2ffffffff2fff7fff7fffff2fffff2ffffffffffff2fffffffffffff2fffffffffff2fffffffffff2ffffffffffffff7fff2fff7fff7ffff7ff333
-                        333f2fff2ff2ffffffffffffffffffff2ffffffff2ffffffffffff7ffff7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7ffffff333
-                        3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
-                        3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
-                        3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
-        """))
-    while Choice_2 == 2:
-        scene.set_background_image(img("""
-            3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
-                        3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
-                        3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333f2ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ff2fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fff2ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffff2fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffff2ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffff2fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffff2ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffff2fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffff2ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffff2fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffff2ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffff2fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffff2ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffff2fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffffff2fffffffffffffffffffffffffffffffffffffff2ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffff2ffffffffffffffffffffffffffffffffffffff22fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffffffff22fffffffffffffffffffffffffffffffffff2ff2ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffffffffff2ffffffffffffffffffffffffffffffff22ffff2fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffff2ffffffffffffffffffffffffffffff2fffffff2ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffffffffffff2ffffffffffffffffffffffffffff2fffffffff2fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffff2ffffffffffffffffffffffffff2fffffffffff2ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffffffffffffff2fffffffffffffffffffffff22fffffffffffff2fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffff2fffffffffffffffffffff2ffffffffffffffff2ffffffffffffffffffffffffffffffffffffffffff2fffffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffffffffffffffff2fffffffffffffffffff2ffffffffffffffffff2ffffffffffffffffffffffffffffffffffffffff2f2ffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffff2fffffffffffffffff2ffffffffffffffffffff2ffffffffffffffffffffffffffffffffffffff2fff2fffffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffffffffffffffffff2fffffffffffffff2ffffffffffffffffffffff2fffffffffffffffffffffffffffffffffff22fffff2ffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffff2ffffffffffff22ffffffffffffffffffffffff2fffffffffffffffffffffffffffffffff2ffffffff2fffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffffffffffffffffffff2ffffffffff2fffffffffffffffffffffffffff2fffffffffffffffffffffffffffffff2fffffffff2fffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffff2ffffffff2fffffffffffffffffffffffffffff2fffffffffffffffffffffffffffff2fffffffffff2ffffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffffffffffffffffffffff2ffffff2fffffffffffffffffffffffffffffff2fffffffffffffffffffffffffff2fffffffffffff2fffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffff2fff22fffffffffffffffffffffffffffffffff2fffffffffffffffffffffffff2fffffffffffffff2ffffffffffffffffffffffffffffffffffffffff333
-                        333fffffffffffffffffffffffffffffffff2f2ffffffffffffffffffffffffffffffffffff2fffffffffffffffffffffff2fffffffffffffffff2fffffffffffffffffffffffffff2fffffffffff333
-                        333ffffffffffffffffffffffffffffffffff2ffffffffffffffffffffffffffffffffffffff2ffffffffffffffffffff22fffffffffffffffffff2ffffffffffffffffffffffff22ffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2ffffffffffffffffff2ffffffffffffffffffffff2ffffffffffffffffffffff2ff2fffffffffff333
-                        333fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2ffffffffffffffff2ffffffffffffffffffffffff2fffffffffffffffffff22fff2fffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2ffffffffffffff2ffffffffffffffffffffffffff2fffffffffffffffff2fffff2fffffffffff333
-                        333fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2ffffffffffff2ffffffffffffffffffffffffffff2ffffffffffffff22fffffff2ffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2ffffffffff2ffffffffffffffffffffffffffffff2ffffffffffff2fffffffff2ffffffffff333
-                        333fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2ffffffff2fffffffffffffffffffffffffffffff2fffffffffff2fffffffffff2fffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2fffff22fffffffffffffffffffffffffffffffff2ffffffff22ffffffffffff2fffffffff333
-                        333fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2fff2ffffffffffffffffffffffffffffffffffff2ffffff2ffffffffffffff2fffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2f2ffffffffffffffffffffffffffffffffffffff2fff22ffffffffffffffff2ffffffff333
-                        333fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2ffffffffffffffffffffffffffffffffffffffff2f2ffffffffffffffffff2ffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2ffffffffffffffffffffffffffffffffffffffffff2ffffffffffffffffffff2fffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2fffffffffffffffffff2fffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2fffffff333
-                        333fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2ffffff333
-                        333fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2ffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2fffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2fffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2fffff333
-                        333fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2ffff333
-                        333fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2ffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2fff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2fff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2fff333
-                        333fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2ff333
-                        333fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2ff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2f333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333f7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333f7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        3337fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        3337fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111f333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333f2ffffffffffffffffffffffffffffffffffffffffffffffffffffff2fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333f2fffffffffffff2ffffffffffffffffffffffff2fffffffffffffff2fffffffff2ffffffffffffffffffffffffffffffffffffff2ffffffffffffffffffffffffffffffffffffffffffffffff333
-                        333f2fff2fffffffff2ffffffffffffffffffffffff2fffffffffffffff2fffffffff2ffffffffffffffffffffffffffffffffffffff2fffffffff2ffffffffffffffffffffffffffffffffffffff333
-                        333f2fff2fffff2fff2fffffffffffffff2ffffffff2ffffffff2ffffff2f7fffffff2ffffffffffffffffffffffffffffffffffffff2fffffffff2fffffffffff2ffffffff2fffffffffffffffff333
-                        333f2fff2fffff2fff2fff2fffffffffff2ffff7fff2ffffffff2ffffff2f7ff2ffff2ff7fffffffffffffffffffffffffffffffffff2fffffffff2fffffffffff2ffffffff2fffffffffffff2fff333
-                        333f2fff2f72ff2fff2fff2fff2fffffff2ffff7fff2ffffffff2ffffff2f7ff2ffff2ff7ffffffffff2ffffffffffffffffffffffff2ffff7ffff2fffffffffff2ffffffff2ffffffff2ffff2fff333
-                        333f2f7f2f72ff2fff2fff2fff2ff7ffff2ffff7fff2fffff7ff2ff7fff2f7ff2ffff2ff7ffffffffff2ffffffffffffffffffffffff2ffff7ffff2fffffffffff2ffffffff2ffffffff2ffff2fff333
-                        333f2f7f2f72ff2fff2fff2fff2ff7ffff2ffff7fff2fffff7ff2ff7fff2f111111111ff7ffffffffff2fffffffffffff2ffffffffff2ffff7fffff2ffff7ff11111111ff7f2ffffffff2ffff2fff333
-                        333f2f7f2f72ff2fff2fff2fff2ff7ffff2ffff7fff2fffff7ff2ff7fff111ff2ffff1117ffffffffff2ffff7ffffffff2fff7ffffff2ffff7fffff2fff1111fff2fff11f7f2ffff7fff2ffff2fff333
-                        333f2f7f2f72ff1111111111ff2ff7ffff2ffff7fff2fffff7ff2ff7f112f7ff2ffff2ff11fffffffff2ffff7ffffffff111111111112ffff7fffff211117fffff2fffff11f2fff1111111fff2fff333
-                        333f2f7f2f72112fff2fff2f111ff7ffff2ffff7fff2fffff7ff2f111ff2f7ff2ffff2ff7f1111fffff2ffff7fffffff11fff7fffff111ffff7fff111fff7fffff2ffffff11111117fff211ff2fff333
-                        333f2f7f2f111f2fff2fff2fff211111ff2ffff7fff2fffff7f11117fff2f7ff2fffff2f7ffff111fff2ffff7fffff11f2fff7fffffff11fff7f1112ffff7fffff2ffffff7f2ffff7fff2f11f2fff333
-                        333f2f7f2f12ff2fff2fff2fff2ff7f1111ffff7ff2ffffff11f2ff7fff2f7ff2fffff2f7fffffff1111ffff7ff111fff2fff7fffffff2111111ffff2fff7ffffff2fffff7ff2fff7fff2ffff2fff333
-                        333f2f7f2172ff2fff2fff2fff2fff7ff2f111111111111117ff2ff7fff2f7ff2fffff2f7ffffffffff211111111fffff2fff7fffffff2ffff7fffff2ffff7fffff2fffff7ff2fff7fff2ffff2fff333
-                        333f2f7f1172ff2fff2fff2fff2fff7ff2fffff7ff2ffffff7ff2ff7fff2f7ff2fffff2f7ffffffffff2ffff7ffffffff2fff7fffffff2fffff7ffff2ffff7fffff2fffff7ff2fff7ffff2fff2fff333
-                        333f2f7f1f72ff2fff2fff2fff2fff7ff2fffff7ff2ffffff7ff2ff7fff2f7ff2fffff2f7ffffffffff2ffff7ffffffff2fff7fffffff2fffff7ffff2ffff7fffff2fffff7ff2fff7ffff2fff2fff333
-                        333f2f711f72ff2fff2fff2fff2fff7ff2fffff7ff2ffffff7ff2ff7fff2f7ff2fffff2f7ffffffffff2ffff7ffffffff2fff7fffffff2fffff7fffff2fff7fffff2fffff7ff2fff7ffff2fff2fff333
-                        333f2f1127f2ff2fff2fff2fff2fff7ff2fffff7ff2ffffff7ff2ff7fff2f7ff2fffff2f7ffffffffff2ffff7ffffffff2fff7fffffff2fffff7fffff2fff7fffff2fffff7ff2fff7ffff2fff2fff333
-                        333f2f1f2ff2ff2fff2fff2fff2fff7ff2fffff7ff2ffffff7ff2ff7fff2f7ff2fffff2f7ffffffffff2ffff7ffffffff2fff7fffffff2fffff7fffff2fff7fffff2fffff7ff2fff7ffff2fff2fff333
-                        333f2f7f2ff2ff2fff2fff2fff2fff7ff2fffff7ff2ffffff7ff2ff7fff2ff7f2fffff2f7ffffffffff2ffff7ffffffff2fff7fffffff2ffffff7ffff2ffff7ffff2fffff7ff2fff7ffff2fff2fff333
-                        333f2ff72ff2ff2fff2fff2fff2ffff7f2fffff7ff2ffffff7ff2ff7fff2ffff2fffff2f7ffffffffff2ffff7ffffffff2fff7fffffff2fffffffffff2ffffffffff2ffff7ff2fff7ffff2fff2fff333
-                        333f2fff2ff2ff2fff2fff2ffffffffff2ffffffff2ffffffff2fff7fff2fffff2fffff2ffffffffffff2fffffffffffff2fffffffffff2fffffffffff2ffffffffffffff7fff2fff7fff2ffff2ff333
-                        333f2fff2ff2ffffffffffffffffffff2ffffffff2ffffffffffff7ffff2ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2ffffff333
-                        3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
-                        3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
-                        3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
-        """))
-def SnPstock():
-    global SnP, NASDAQ
-  
-    # if S&P true then splash their choice then ask how much they want to invest and their current wallet amount
-    if Choice_1 == 1:
-        SnP = Choice_1
-        game.splash("you've chosen the S&P!")
-        game.splash("This is its current Value: " + "$" + ("" + str(SnP)))
-    elif Choice_2 == 2:
-        NASDAQ = Choice_2
-        game.splash("you've chosen NASDAQ")
-        game.splash("This is its current Value: " + "$" + ("" + str(NASDAQ)))
-NASDAQ = 0
-SnP = 0
-Choice_2 = 0
-Choice_1 = 0
-game.splash("Welcome to the Stock Game Investor! ")
-pause(500)
-game.splash("What would you like to invest in?")
-pause(500)
-SnPstock()
-pause(500)
-investment()
+# PLEASE LET ME KNOW IF NONE OF THIS MAKES SENSE
+# I WILL BE MORE THAN HAPPY TO EXPLAIN ! ! ! ! !
+def choose_investment():
+    global choice_1
+    choice_1 = game.ask_for_string("what would you like to invest in?  NASDAQ or SnP", 6)
+    game.splash("this is your investment option:  " + choice_1)
+def play_game():
+    while wallet > 0:
+        choose_investment()
+        # stock choice
+        invest_in_stock()
+        # investment & upd wallet
+        if wallet <= 0:
+            game.splash("you lose! you really thought you were gonna make a profit? HAHA!")
+            break
+def invest_in_stock():
+    global stock_value, investment, result, wallet
+    # stock selection and rand val assinment
+    if choice_1 == "NASDAQ":
+        stock_value = randint(1000, 50000)
+    elif choice_1 == "SnP":
+        # stock val for NAs
+        stock_value = randint(1000, 50000)
+    else:
+        # same for SnP
+        game.splash("choose something ya goober!")
+        return
+    # investment amnt
+    investment = randint(500, 5000)
+    game.splash("you're investing $" + ("" + str(investment)) + " in " + ("" + str(choice_1)))
+    # win or lose
+    result = randint(-1, 1)
+    # -1 loss and 1 gain
+    if result == 1:
+        gain_or_loss = randint(100, 10000)
+        # gain $100 and $10,000
+        wallet += gain_or_loss
+        game.splash("congratulations! you earned $" + ("" + str(gain_or_loss)) + " from your " + ("" + str(choice_1)) + " investment.")
+    else:
+        # Convert to string
+        loss = randint(1000, 10000)
+        # lose $1,000 and $10,000
+        wallet += 0 - loss
+        game.splash("LOL! you lost $" + ("" + str(loss)) + " from your " + ("" + str(choice_1)) + " investment")
+    # conv to string
+    game.splash("your current wallet amount is: $" + ("" + str(wallet)))
+result = 0
+investment = 0
+stock_value = 0
+choice_1 = ""
+wallet = 0
+wallet = 30000
+# starting wallet amnt
+game.splash("welcome to the Stock Game Investor!")
+pause(200)
+game.splash("you're start with $" + ("" + str(wallet)))
+play_game()
